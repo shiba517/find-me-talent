@@ -1,6 +1,6 @@
 import streamlit as st
-import kaggle
-from kaggle.api.kaggle_api_extended import KaggleApi
+# import kaggle
+# from kaggle.api.kaggle_api_extended import KaggleApi
 import zipfile
 import os.path
 import pandas as pd
@@ -8,8 +8,8 @@ import pandas as pd
 class FMT():
     def __init__(self):
         self.title = 'Find Me Talent'
-        self.kaggle_api = KaggleApi()
-        self.kaggle_api_auth = self.kaggle_api.authenticate()
+        # self.kaggle_api = KaggleApi()
+        # self.kaggle_api_auth = self.kaggle_api.authenticate()
         self.kaggle_ds_url = 'stefanoleone992/fifa-22-complete-player-dataset'
         self.kaggle_csv_name = 'players_22.csv'
         self.json_file_cleaned = 'players_22_cleaned.json'
@@ -59,7 +59,7 @@ class FMT():
 
     # Sets up base data for run_streamlit()
     def pre_run_streamlit(self):
-        self.extract_and_unzip()
+        # self.extract_and_unzip()
         self.set_pandas_df()
         self.clean_pandas_df()
         self.create_for_pandas()
